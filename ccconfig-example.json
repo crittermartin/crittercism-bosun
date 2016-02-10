@@ -1,0 +1,65 @@
+{
+    "clientID": "Your REST API Client ID",
+    "username": "Your Crittercism username",
+    "password": "Your Crittercism password",
+    "token": "Optional - an OAuth2 token from Crittercism - if not provided, the collector scripts will fetch and store",
+    "endpoints": [
+        {
+            "appId": "App ID for monitored endpoint, ex: 519d53101386202089000007", 
+            "domain": "The host part of the endpoint, ex: graph.facebook.com", 
+            "endpoint": "The path part of the endpoint, ex: /critter.crittercism/picture"
+        }, 
+        {
+            "appId": "Put an entry in the endpoints array for each endpoint you want to monitor", 
+            "domain": "", 
+            "endpoint": ""
+        }
+    ],
+    "endpoints-auto": [
+	    {
+		    "appId": "automatically monitor the top <limit> endpoints (by volume)",
+		    "limit": 20
+	    }
+    ],
+    "services": [
+        {
+            "appId": "App ID for monitored service, ex: 519d53101386202089000007", 
+            "service": "The name of the monitored service as seen in Crittercism UI, ex: urbanairship"
+        }, 
+        {
+            "appId": "519d53101386202089000007", 
+            "domain": "Another way to specify a service to monitor is by domain, ex: graph.facebook.com"
+        }
+    ], 
+    "services-auto": [
+	    {
+		    "appId": "automatically monitor the top <limit> endpoints (by volume)",
+		    "limit": 20
+	    }
+    ],
+    "transactions": [
+        {
+            "appId": "Specify an App ID to monitor transactions in that app, ex: 519d53101386202089000007"
+        }
+    ], 
+    "trends": [
+        {
+            "appId": "Monitor Performance trends groupings, ex: 519d53101386202089000007", 
+            "groupBy": "device", 
+            "limit": 100, 
+            "sort": "userbase"
+        }, 
+        {
+            "appId": "519d53101386202089000007", 
+            "groupBy": "os", 
+            "limit": 100, 
+            "sort": "userbase"
+        }, 
+        {
+            "appId": "519d53101386202089000007", 
+            "groupBy": "appVersion", 
+            "limit": 100, 
+            "sort": "userbase"
+        }
+    ]
+}
